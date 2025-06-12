@@ -55,6 +55,7 @@ aws lambda create-function --function-name CloudTrailSecurityMonitor --runtime p
 or
 ```bash
 aws lambda update-function-code --function-name CloudTrailSecurityMonitor --zip-file fileb://backend/lambda_deploy.zip
+&&
 aws lambda update-function-configuration --function-name CloudTrailSecurityMonitor --environment file://env.json
 ```
 
