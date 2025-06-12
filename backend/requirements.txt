@@ -1,3 +1,3 @@
 boto3
-requests  # nếu bạn gửi alert qua Slack webhook
-pandas    # nếu bạn xử lý dữ liệu logs phức tạp
+requests  
+pandas    
