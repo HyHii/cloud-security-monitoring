@@ -54,9 +54,7 @@ aws lambda create-function --function-name CloudTrailSecurityMonitor --runtime p
 ```
 or
 ```bash
-aws lambda update-function-code --function-name CloudTrailSecurityMonitor --zip-file fileb://backend/lambda_deploy.zip
-&&
-aws lambda update-function-configuration --function-name CloudTrailSecurityMonitor --environment file://env.json
+aws lambda update-function-code --function-name CloudTrailSecurityMonitor --zip-file fileb://backend/lambda_deploy.zip && aws lambda update-function-configuration --function-name CloudTrailSecurityMonitor --environment file://env.json
 ```
 
 4. Create a CloudWatch Event Rule to trigger the Lambda function on failed login events.
@@ -78,5 +76,6 @@ Run the test and check the Lambda logs and verify that alert notifications are r
 
 ## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
