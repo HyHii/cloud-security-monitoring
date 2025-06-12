@@ -57,6 +57,11 @@ or
 aws lambda update-function-code --function-name CloudTrailSecurityMonitor --zip-file fileb://backend/lambda_deploy.zip
 aws lambda update-function-configuration --function-name CloudTrailSecurityMonitor --e
 ```
+
 4. Create a CloudWatch Event Rule to trigger the Lambda function on failed login events.
+
+##Testing Instructions
+
+Create a test event in AWS Lambda Console with the following payload:
 
 
