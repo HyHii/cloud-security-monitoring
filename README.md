@@ -73,13 +73,6 @@ Create a test event in AWS Lambda Console with the following payload:
 }
 Run the test and check the Lambda logs and verify that alert notifications are received via email or Slack.
 
-## Future Enhancements
-Extend alerts to cover other security events
-
-Send notifications via other channels such as SMS or Slack webhook
-
-Integrate a dashboard for real-time monitoring
-
 ## License
 
 
