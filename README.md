@@ -16,7 +16,7 @@ It leverages AWS Lambda for real-time event processing to enhance the security o
 - AWS CLI for Lambda deployment  
 - PowerShell / Bash for deployment automation
 
-~~~
+`````
 ## Project Structure
 cloud-security-monitoring/
 ├── backend/
@@ -31,7 +31,7 @@ cloud-security-monitoring/
 ├── .gitignore
 ├── README.md
 └── env.json
-~~~
+`````
 
 ## Deployment Instructions
 
