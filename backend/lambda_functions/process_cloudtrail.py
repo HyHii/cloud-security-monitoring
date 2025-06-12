@@ -2,7 +2,7 @@ import boto3
 import json
 import os
 
-SNS_TOPIC_ARN = os.environ.get('arn:aws:sns:ap-southeast-1:369683261967:cloud-security-alerts:edf3baae-eaaf-44a5-be24-1274aeda1b8b')
+SNS_TOPIC_ARN = os.environ.get('SNS_TOPIC_ARN', 'arn:aws:sns:ap-southeast-1:369683261967:cloud-security-alerts')
 
 def lambda_handler(event, context):
     sns_client = boto3.client('sns')

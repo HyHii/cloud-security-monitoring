@@ -1,4 +1,34 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.zip
+*.py[cod]
+*$py.class
+
+# Cấu trúc thư mục ảo môi trường ảo
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Thư mục VSCode
 .vscode/
+
+# File zip đóng gói deploy Lambda
+*.zip
+lambda_deploy.zip
+
+# Các file logs
+*.log
+
+# File hệ thống (Windows)
+Thumbs.db
+Desktop.ini
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Các file cache khác
+*.cache

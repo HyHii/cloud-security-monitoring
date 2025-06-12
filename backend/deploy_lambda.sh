@@ -24,7 +24,7 @@ else
   aws lambda create-function --function-name $FUNCTION_NAME \
     --runtime $RUNTIME --role $ROLE_ARN --handler $HANDLER \
     --zip-file fileb://backend/lambda_deploy.zip \
-    --environment Variables="{SNS_TOPIC_ARN=$SNS_TOPIC_ARN}"
+    --environment Variables="{\"SNS_TOPIC_ARN\":\"$SNS_TOPIC_ARN\"}"
 fi
 
 echo "Deployment complete."
