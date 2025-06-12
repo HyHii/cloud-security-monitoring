@@ -39,5 +39,24 @@ cloud-security-monitoring/
 
 ```bash
 aws configure
+```
+
+2. Prepare the Lambda package:
+   Using PowerShell:
+```bash
 Compress-Archive -Path backend/lambda_functions/* -DestinationPath backend/lambda_deploy.zip -Force
 ```
+
+3. Create or update the Lambda function:
+   Run the AWS CLI command (replace your Role ARN and SNS Topic ARN accordingly):
+```bash
+aws lambda create-function --function-name CloudTrailSecurityMonitor --runtime python3.9 --role arn:aws:iam::<ACCOUNT_ID>:role/<LAMBDA_ROLE> --handler process_cloudtrail.lambda_handler --zip-file fileb://backend/lambda_deploy.zip --environment file://env.json
+```
+or
+```bash
+aws lambda update-function-code --function-name CloudTrailSecurityMonitor --zip-file fileb://backend/lambda_deploy.zip
+aws lambda update-function-configuration --function-name CloudTrailSecurityMonitor --e
+```
+4. Create a CloudWatch Event Rule to trigger the Lambda function on failed login events.
+
+
