@@ -60,8 +60,27 @@ aws lambda update-function-configuration --function-name CloudTrailSecurityMonit
 
 4. Create a CloudWatch Event Rule to trigger the Lambda function on failed login events.
 
-##Testing Instructions
-
+## Testing Instructions
 Create a test event in AWS Lambda Console with the following payload:
+{
+  "Records": [
+    {
+      "Sns": {
+        "Message": "ConsoleLogin Failed for user test-user"
+      }
+    }
+  ]
+}
+Run the test and check the Lambda logs and verify that alert notifications are received via email or Slack.
+
+## Future Enhancements
+Extend alerts to cover other security events
+
+Send notifications via other channels such as SMS or Slack webhook
+
+Integrate a dashboard for real-time monitoring
+
+## License
+
 
 
