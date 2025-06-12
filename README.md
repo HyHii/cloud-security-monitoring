@@ -62,6 +62,7 @@ aws lambda update-function-configuration --function-name CloudTrailSecurityMonit
 
 ## Testing Instructions
 Create a test event in AWS Lambda Console with the following payload:
+```json
 {
   "Records": [
     {
@@ -71,6 +72,7 @@ Create a test event in AWS Lambda Console with the following payload:
     }
   ]
 }
+```
 Run the test and check the Lambda logs and verify that alert notifications are received via email or Slack.
 
 ## License
